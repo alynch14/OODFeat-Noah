@@ -8,12 +8,13 @@ public class Package implements Measurable {
     private int surfaceArea;
     private int volume;
 
-    public Package(){
-        
+    public Package(int length, int width){
+        this.length=length;
+        this.width=width;
     }
 
     @Override
     public String getMeasure() {
-        return null;
+        return "Length: "+length+", Width: "+ width;
     }
 }
