@@ -56,6 +56,4 @@ public class Temperature {
     public boolean equals(Object otherTemp){
         return (otherTemp.getClass() == Temperature.class) && (farenheit == new Temperature((Temperature)otherTemp).farenheit && celsius == ((Temperature)otherTemp).celsius);
     }
-
-
 }
