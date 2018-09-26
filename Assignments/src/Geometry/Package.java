@@ -15,6 +15,6 @@ public class Package implements Measurable {
 
     @Override
     public String getMeasure() {
-        return "Length: "+length+", Width: "+ width;
+        return String.format("Length: %d\n Width: %d\n", length, width);
     }
 }
