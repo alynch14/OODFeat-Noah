@@ -1,6 +1,6 @@
 package Geometry;
 
-class Department implements Sized {
+public class Department implements Sized {
     String sized;
 
     public Department (String inSize) {

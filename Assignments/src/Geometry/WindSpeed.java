@@ -5,7 +5,7 @@ public class WindSpeed implements Measurable {
     private int distance;
     private int timeInSeconds;
 
-    public WindSpeed(){
+    public WindSpeed(double v){
         speed = 0;
         distance = 0;
         timeInSeconds = 0;
@@ -15,12 +15,6 @@ public class WindSpeed implements Measurable {
         distance = d;
         timeInSeconds = t;
         speed = distance/timeInSeconds;
-    }
-
-    public WindSpeed(int s, int d, int t){
-        speed = s;
-        distance = d;
-        timeInSeconds = t;
     }
 
     @Override

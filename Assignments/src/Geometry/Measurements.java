@@ -6,7 +6,7 @@ public class Measurements {
         Class name=m.getClass();
         String string = null;
         if (m instanceof StringBuffer) {
-            string= "16 characters";
+            string= m+ " characters";
         }
         else if (m instanceof Sized){
             if(m instanceof StudentRecords){
@@ -16,10 +16,10 @@ public class Measurements {
                 string = " ";
             }
             else if(m instanceof Department){
-                string = "16 credits";
+                string = m+ " credits";
             }
             else if(m instanceof Sized && m instanceof Building){
-                string = "8560 square feet";
+                string = m+ " square feet";
             }
         }
         else {

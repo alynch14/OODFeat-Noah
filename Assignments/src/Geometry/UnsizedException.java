@@ -1,6 +1,6 @@
 package Geometry;
 
-class UnsizedException extends Exception {
+public class UnsizedException extends Exception {
     String sized;
 
     public UnsizedException (String message){
