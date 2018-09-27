@@ -1,13 +1,17 @@
 package Geometry;
 
 public class Rectangle implements Measurable {
-    int weightOZ, weightLBS;
-    public  Rectangle(int weightLBS, int weightOZ) {
-        this.weightLBS = weightLBS;
-        this.weightOZ = weightOZ;
+    private int length;
+    private int width;
+
+    public Rectangle(int length, int width){
+        this.length=length;
+        this.width=width;
     }
+
     @Override
     public String getMeasure() {
-        return String.format("Pounds: %d\n Ounces: %d\n", weightLBS, weightOZ);
+        return String.format("Length: %d\n Width: %d\n", length, width);
     }
+
 }
