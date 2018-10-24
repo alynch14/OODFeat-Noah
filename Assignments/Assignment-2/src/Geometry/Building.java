@@ -1,6 +1,6 @@
 package Geometry;
 
-class Building implements Sized {
+public class Building implements Sized {
     String sized;
 
     public Building(String inSize) {

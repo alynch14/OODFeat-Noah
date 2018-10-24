@@ -1,20 +1,13 @@
 package Geometry;
 
 public class Package implements Measurable {
-    private int length;
-    private int width;
-    private int height;
-    private int weight;
-    private int surfaceArea;
-    private int volume;
-
-    public Package(int length, int width){
-        this.length=length;
-        this.width=width;
+    int weightOZ, weightLBS;
+    public  Package(int weightLBS, int weightOZ) {
+        this.weightLBS = weightLBS;
+        this.weightOZ = weightOZ;
     }
-
     @Override
     public String getMeasure() {
-        return String.format("Length: %d\n Width: %d\n", length, width);
+        return String.format("Pounds: %d\n Ounces: %d\n", weightLBS, weightOZ);
     }
 }
