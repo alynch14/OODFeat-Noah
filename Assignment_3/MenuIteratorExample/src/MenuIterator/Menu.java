@@ -185,11 +185,17 @@ public class Menu {
     }
 
     public void addItem(MenuItem item){
-
+        originalListOfItems.add(item);
     }
 
     public void deleteItem(MenuIterator iter, MenuItem itemToDelete){
-        
+        int i = 0;
+
+        while(itemToDelete == iter.next()){
+            i++;
+        }
+
+        originalListOfItems.remove(i);
     }
 
     public MenuIterator getAllItemsIterator(){
@@ -206,5 +212,9 @@ public class Menu {
 
     public MenuIterator getPriceIterator(double priceCeiling){
         return new PriceIterator(originalListOfItems, priceCeiling);
+    }
+
+    public void print(){
+
     }
 }
