@@ -6,37 +6,41 @@ public class MenuItem {
     private int category;
     private double price;
 
-    public MenuItem(String name, boolean healthy, int category, double price){
+    public MenuItem(String name, boolean healthy, int category, double price) {
         this.name = name;
         this.healthy = healthy;
         this.category = category;
-        this. price = price;
+        this.price = price;
     }
 
-    public String getName(){
+    public MenuItem(Object obj) {
+    }
+
+    public String getName() {
         return name;
     }
 
-    public boolean getHealthy(){
+    public boolean getHealthy() {
         return healthy;
     }
 
-    public int getCategory(){
+    public int getCategory() {
         return category;
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return price;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return new String(name + " - " + price);
     }
 
     @Override
-    public boolean equals(Object obj){
-        MenuItem item = (obj.typeof(MenuItem.class))? new MenuItem(obj): null;
+    public boolean equals(Object obj) {
+//MenuItem item = (obj.typeof(MenuItem.class))? new MenuItem(obj): null;
+        MenuItem item = (obj.getClass().equals(MenuItem.class)) ? new MenuItem(obj) : null;
         return (item != null && name == item.name && healthy == item.healthy && category == item.category && price == item.price);
     }
 }
