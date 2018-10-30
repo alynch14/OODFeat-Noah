@@ -21,18 +21,19 @@ public class Menu {
 
         public AllItemsIterator(){
             listOfItems = new ArrayList<>();
-            index = 0;
+            index = -1;
         }
 
         public AllItemsIterator(List<MenuItem> newList){
+            listOfItems = new ArrayList<>();
             listOfItems.addAll(newList);
-            index = 0;
+            index = -1;
         }
 
         public AllItemsIterator(MenuItem[] array){
             listOfItems = new ArrayList<>();
             listOfItems.addAll(Arrays.asList(array));
-            index = 0;
+            index = -1;
         }
 
         @Override
@@ -43,7 +44,7 @@ public class Menu {
         @Override
         public MenuItem next(){
             index++;
-            return listOfItems;
+            return listOfItems.get(index);
         }
     }
 
@@ -57,16 +58,17 @@ public class Menu {
 
         public ItemIterator(){
             listOfItems = new ArrayList<>();
-            index = 0;
+            index = -1;
         }
 
         public ItemIterator(List<MenuItem> newList, int category){
+            listOfItems = new ArrayList<>();
             for(MenuItem item : newList){
                 if(item.getCategory() == category){
                     listOfItems.add(item);
                 }
             }
-            index = 0;
+            index = -1;
         }
 
         public ItemIterator(MenuItem[] array, int category){
@@ -76,7 +78,7 @@ public class Menu {
                     listOfItems.add(array[i]);
                 }
             }
-            index = 0;
+            index = -1;
         }
 
         @Override
@@ -101,16 +103,17 @@ public class Menu {
 
         public HeartHealthyIterator(){
             listOfItems = new ArrayList<>();
-            index = 0;
+            index = -1;
         }
 
         public HeartHealthyIterator(List<MenuItem> newList){
+            listOfItems = new ArrayList<>();
             for(MenuItem item : newList){
                 if(item.getHealthy()){
                     listOfItems.add(item);
                 }
             }
-            index = 0;
+            index = -1;
         }
         
         public HeartHealthyIterator(MenuItem[] array){
@@ -120,7 +123,7 @@ public class Menu {
                     listOfItems.add(array[i]);
                 }
             }
-            index = 0;
+            index = -1;
         }
 
         @Override
@@ -145,16 +148,17 @@ public class Menu {
 
         public PriceIterator(){
             listOfItems = new ArrayList<>();
-            index = 0;
+            index = -1;
         }
 
         public PriceIterator(List<MenuItem> newList, double ceiling){
+            listOfItems = new ArrayList<>();
             for(MenuItem item : newList){
                 if(item.getPrice() < ceiling){
                     listOfItems.add(item);
                 }
             }
-            index = 0;
+            index = -1;
         }
 
         public PriceIterator(MenuItem[] array, double ceiling){
@@ -164,7 +168,7 @@ public class Menu {
                     listOfItems.add(array[i]);
                 }
             }
-            index = 0;
+            index = -1;
         }
 
         @Override
@@ -191,7 +195,7 @@ public class Menu {
     public void deleteItem(MenuIterator iter, MenuItem itemToDelete){
         int i = 0;
 
-        while(itemToDelete == iter.next()){
+        while(!itemToDelete.equals(iter.next())){
             i++;
         }
 

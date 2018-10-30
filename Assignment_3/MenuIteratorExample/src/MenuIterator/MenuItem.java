@@ -33,4 +33,10 @@ public class MenuItem {
     public String toString(){
         return new String(name + " - " + price);
     }
+
+    @Override
+    public boolean equals(Object obj){
+        MenuItem item = (obj.typeof(MenuItem.class))? new MenuItem(obj): null;
+        return (item != null && name == item.name && healthy == item.healthy && category == item.category && price == item.price);
+    }
 }
