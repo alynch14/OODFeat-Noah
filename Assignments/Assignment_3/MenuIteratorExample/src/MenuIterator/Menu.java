@@ -190,7 +190,7 @@ public class Menu {
         originalListOfItems.add(item);
     }
 
-    public void deleteItem(Iterator iter, MenuItem itemToDelete){
+    public void deleteItem(MenuIterator iter, MenuItem itemToDelete){
         int i = 0;
         while(!Objects.equals(itemToDelete, iter.hasNext())){
             i++;
