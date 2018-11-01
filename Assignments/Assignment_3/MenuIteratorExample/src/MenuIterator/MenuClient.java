@@ -130,6 +130,7 @@ public class MenuClient {
 
         myMenu.addItem(new MenuItem("Pound Cake", Menu.NOT_HEART_HEALTHY, Menu.DESSERT, 7.50));
 
+        myMenu.addItem(new MenuItem("Taco", Menu.NOT_HEART_HEALTHY, Menu.MAIN_DISH, 5.95));
     }
 
 
@@ -266,9 +267,10 @@ public class MenuClient {
 
         price = in.nextDouble();
 
+        MenuItem toDelete = new MenuItem(name, healthy, category, price);
 
 
-        myMenu.deleteItem(new MenuItem(name, healthy, category, price));
+        myMenu.deleteItem(myMenu.getAllItemsIterator(), toDelete);
 
     }
 

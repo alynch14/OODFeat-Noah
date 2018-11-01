@@ -191,12 +191,12 @@ public class Menu {
     }
 
     public void deleteItem(MenuIterator iter, MenuItem itemToDelete){
-        int i = 0;
-        while(!Objects.equals(itemToDelete, iter.hasNext())){
-            i++;
+        while (iter.hasNext()){
+            MenuItem d= iter.next();
+            if(getAllItemsIterator().next().getName().equals(itemToDelete.getName())){
+                originalListOfItems.remove(d);
+            }
         }
-
-        originalListOfItems.remove(i);
     }
 
     public MenuIterator getAllItemsIterator(){
