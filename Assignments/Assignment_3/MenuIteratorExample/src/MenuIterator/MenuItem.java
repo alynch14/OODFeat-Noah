@@ -36,7 +36,7 @@ public class MenuItem {
 
     @Override
     public boolean equals(Object obj){
-        MenuItem item = (obj.typeof(MenuItem.class))? new MenuItem(obj): null;
+        MenuItem item = (obj instanceof MenuItem)? new MenuItem(obj): null;
         return (item != null && name == item.name && healthy == item.healthy && category == item.category && price == item.price);
     }
 }
