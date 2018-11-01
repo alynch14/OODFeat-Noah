@@ -1,8 +1,6 @@
 package MenuIterator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Menu {
     public static final int APPETIZERS = 1;
@@ -12,10 +10,10 @@ public class Menu {
     public static final boolean NOT_HEART_HEALTHY = false;
     private List<MenuItem> originalListOfItems;
 
-     /**
-      * Iterator that will iterate over all of the items sent to it.
-      */
-    private class AllItemsIterator implements MenuIterator{
+    /**
+     * Iterator that will iterate over all of the items sent to it.
+     */
+    private class AllItemsIterator implements MenuIterator {
         private List<MenuItem> listOfItems;
         private int index;
 
@@ -52,7 +50,7 @@ public class Menu {
      * Iterator that iterates over items of the specific category that the
      * user enters in.
      */
-    private class ItemIterator implements MenuIterator{
+    private class ItemIterator implements MenuIterator {
         private List<MenuItem> listOfItems;
         private int index;
 
@@ -86,7 +84,7 @@ public class Menu {
             return (index + 1) < listOfItems.size();
         }
 
-        @Override 
+        @Override
         public MenuItem next(){
             index++;
             return listOfItems.get(index);
@@ -94,10 +92,10 @@ public class Menu {
     }
 
     /**
-     * Iterator that separates the non-healthy items out of the list 
+     * Iterator that separates the non-healthy items out of the list
      * and iterates over only the healthy ones.
      */
-    private class HeartHealthyIterator implements MenuIterator{
+    private class HeartHealthyIterator implements MenuIterator {
         private List<MenuItem> listOfItems;
         private int index;
 
@@ -115,7 +113,7 @@ public class Menu {
             }
             index = -1;
         }
-        
+
         public HeartHealthyIterator(MenuItem[] array){
             listOfItems = new ArrayList<>();
             for(int i = 0; i < array.length; i++){
@@ -142,7 +140,7 @@ public class Menu {
      * Iterator that sorts out the items that are over the price ceiling that the user sets,
      * and iterates only over the items that are less.
      */
-    private class PriceIterator implements MenuIterator{
+    private class PriceIterator implements MenuIterator {
         private List<MenuItem> listOfItems;
         private int index;
 
@@ -179,7 +177,7 @@ public class Menu {
         @Override
         public MenuItem next(){
             index++;
-            return listOfItems.get(i);
+            return listOfItems.get(index);
         }
     }
     //End of Iterators
@@ -193,24 +191,26 @@ public class Menu {
     }
 
     public void deleteItem(MenuIterator iter, MenuItem itemToDelete){
-        int i = 0;
-
-        while(!itemToDelete.equals(iter.next())){
-            i++;
+        while (iter.hasNext()){
+            MenuItem d= iter.next();
+            if(getAllItemsIterator().next().getName().equals(itemToDelete.getName())){
+                originalListOfItems.remove(d);
+            }
         }
-
-        originalListOfItems.remove(i);
     }
 
     public MenuIterator getAllItemsIterator(){
+
         return new AllItemsIterator(originalListOfItems);
     }
 
     public MenuIterator getItemIterator(int itemType){
+
         return new ItemIterator(originalListOfItems, itemType);
     }
 
     public MenuIterator getHeartHealthyIterator(){
+
         return new HeartHealthyIterator(originalListOfItems);
     }
 
