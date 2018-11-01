@@ -14,6 +14,13 @@ public class MenuItem {
     }
 
     public MenuItem(Object obj) {
+        if(obj instanceof MenuItem){
+            MenuItem item = (MenuItem) obj;
+            category = item.category;
+            name = item.name;
+            healthy = item.healthy;
+            price = item.price;
+        }
     }
 
     public String getName() {
