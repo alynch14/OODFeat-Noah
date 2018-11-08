@@ -13,3 +13,4 @@ public class ReceiptFactory {
 //        StateComputation object to be used on all receipts.
 
     }
+}

@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class BasicReceipt implements Receipt {
     private String storeInfo;  	// store number, store address, phone number
     private String stateCode;  	// MD, DE, CA or MA
