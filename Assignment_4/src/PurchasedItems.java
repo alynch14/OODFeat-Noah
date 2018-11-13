@@ -8,14 +8,14 @@ public class PurchasedItems  {
     }
 
     public void addItem(StoreItem item) {
-        //...
+        // ToDo: implement method
         }
 
     public double getTotalCost() {
-//        ...
+//       ToDo: implement method
     }
 
     public boolean containsItem(String itemCode) {
-//        ...
+//      ToDo: implement method
     }
 }

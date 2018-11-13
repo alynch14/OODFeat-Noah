@@ -5,8 +5,8 @@ public class StoreItem  {
 
     public StoreItem(String code, String descript, String price)
     {
-    //    ...
+    // todo implement
     }
 
-    // appropriate getters and setters
+    // todo implement appropriate getters and setters
 }

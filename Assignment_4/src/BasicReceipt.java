@@ -17,6 +17,6 @@ public class BasicReceipt implements Receipt {
     public void setDate(Date date) { this.date = date; }
 
     public void prtReceipt() {
-        // to implement
+        // todo implement
     }
 }
