@@ -5,8 +5,9 @@ public class MDTaxComputation extends TaxComputation {
     }
 
     private boolean taxHoliday(ReceiptDate date) {
+        // todo returns true if date of receipt within the state’s tax free holiday,
+        // todo else returns false. Supporting method of method computeTax.
         return false;
     }
-    // returns true if date of receipt within the state’s tax free holiday,
-    // else returns false. Supporting method of method computeTax.
+    //todo  tax computation objects for other states are similar  (to be completed)
 }
