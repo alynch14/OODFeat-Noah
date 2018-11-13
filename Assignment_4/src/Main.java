@@ -1,8 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        // todo 1.	Creates a PurchasedItems object.
-        // todo 2.	Constructs ReceiptFactory object.
+        Object items = null;
+        String date = null;
+        PurchasedItems purchasedItems = new PurchasedItems();
+        ReceiptFactory factory = new ReceiptFactory();
         // todo 3.	Prompts user for items to purchase, storing each in PurchasedItems.
         // todo 4.	Calls the getReceipt method of the factory to obtain constructed receipt.
         // todo 5.	Prints receipt by method call to constructed receipt.
@@ -13,7 +15,8 @@ public class Main {
 
         // todo get all user selections(to be implemented)
 
-        ReceiptFactory factory = new ReceiptFactory();
+//        while(input!=null){add items to the reciept }
+
         Receipt receipt = factory.getReceipt(items, date);
         receipt.prtReceipt();
 

@@ -9,13 +9,15 @@ public class PurchasedItems  {
 
     public void addItem(StoreItem item) {
         // ToDo: implement method
-        }
+    }
 
     public double getTotalCost() {
 //       ToDo: implement method
+        return 0;
     }
 
     public boolean containsItem(String itemCode) {
 //      ToDo: implement method
+        return false;
     }
 }

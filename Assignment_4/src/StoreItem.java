@@ -5,8 +5,30 @@ public class StoreItem  {
 
     public StoreItem(String code, String descript, String price)
     {
-    // todo implement
+        // todo implement
     }
 
-    // todo implement appropriate getters and setters
+    public String getItemPrice() {
+        return itemPrice;
+    }
+
+    public String getItemDescription() {
+        return itemDescription;
+    }
+
+    public String getItemCode() {
+        return itemCode;
+    }
+
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
+    }
+
+    public void setItemCode(String itemCode) {
+        this.itemCode = itemCode;
+    }
+
+    public void setItemPrice(String itemPrice) {
+        this.itemPrice = itemPrice;
+    }
 }

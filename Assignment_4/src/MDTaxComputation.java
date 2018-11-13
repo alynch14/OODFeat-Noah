@@ -2,6 +2,12 @@ public class MDTaxComputation extends TaxComputation {
 
     public double computeTax(PurchasedItems items, ReceiptDate date) {
         // todo calls private method taxHoliday as part of this computation
+        return 0;
+    }
+
+    @Override
+    protected boolean taxHoliday() {
+        return false;
     }
 
     private boolean taxHoliday(ReceiptDate date) {
