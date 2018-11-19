@@ -5,15 +5,19 @@ public class MDTaxComputation extends TaxComputation {
         return 0;
     }
 
-    @Override
-    protected boolean taxHoliday() {
-        return false;
-    }
+//    @Override
+//    protected boolean taxHoliday() {
+//        return false;
+//    }
 
-    private boolean taxHoliday(ReceiptDate date) {
+    protected boolean taxHoliday(ReceiptDate date) {
         // todo returns true if date of receipt within the state’s tax free holiday,
-        // todo else returns false. Supporting method of method computeTax.
-        return false;
+        if (date.equals(true)){ //todo change placeholder with actual dates
+            return true;
+        }
+        else {
+            return false;
+        }
     }
     //todo  tax computation objects for other states are similar  (to be completed)
 }

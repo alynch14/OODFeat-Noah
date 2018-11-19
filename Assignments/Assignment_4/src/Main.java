@@ -20,6 +20,5 @@ public class Main {
         Receipt receipt = factory.getReceipt(items, date);
         receipt.prtReceipt();
 
-
     }
 }

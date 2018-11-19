@@ -1,3 +1,8 @@
+import java.util.Date;
+
 public class ReceiptDate {
-//todo
+    public static Date getDate() {
+        Date date= new Date();
+        return date;
+    }
 }

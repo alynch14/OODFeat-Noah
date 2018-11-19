@@ -13,8 +13,8 @@ public class PurchasedItems  {
 
     public double getTotalCost() {
         double total = 0;
-        for(StorItem item : items){
-            total += item.getItemPrice()
+        for(StoreItem item : items){
+            total +=  (double) Integer.parseInt(item.getItemPrice());
         }
         return total;
     }
