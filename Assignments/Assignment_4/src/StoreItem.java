@@ -5,7 +5,9 @@ public class StoreItem  {
 
     public StoreItem(String code, String descript, String price)
     {
-        // todo implement
+        itemCode = code;
+        itemDescription = descript;
+        itemPrice = price;
     }
 
     public String getItemPrice() {

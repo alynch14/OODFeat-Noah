@@ -8,6 +8,10 @@ public class BasicReceipt implements Receipt {
     private Date date;
     private TaxComputation tc;
 
+    public BasicReceipt(){
+        items = new PurchasedItems();
+    }
+
     public BasicReceipt(PurchasedItems items) {
         this.items = items;
     }

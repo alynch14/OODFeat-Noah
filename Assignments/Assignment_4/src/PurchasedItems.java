@@ -8,16 +8,23 @@ public class PurchasedItems  {
     }
 
     public void addItem(StoreItem item) {
-        // ToDo: implement method
+        items.add(item);
     }
 
     public double getTotalCost() {
-//       ToDo: implement method
-        return 0;
+        double total = 0;
+        for(StorItem item : items){
+            total += item.getItemPrice()
+        }
+        return total;
     }
 
     public boolean containsItem(String itemCode) {
-//      ToDo: implement method
+        for(StoreItem item : items){
+            if(item.getItemCode().equals(itemCode)){
+                return true;
+            }
+        }
         return false;
     }
 }
