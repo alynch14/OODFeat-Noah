@@ -5,7 +5,7 @@ public class BasicReceipt implements Receipt {
     private String stateCode;  	// MD, DE, CA or MA
 
     private PurchasedItems items;
-    private Date date;
+    private ReceiptDate date;
     private TaxComputation tc;
 
     public BasicReceipt(){
@@ -18,7 +18,7 @@ public class BasicReceipt implements Receipt {
 
     public void setTaxComputation(TaxComputation tc) { this.tc = tc; }
 
-    public void setDate(Date date) {
+    public void setDate(ReceiptDate date) {
         this.date = date;
     }
 
