@@ -2,12 +2,10 @@ import java.util.Date;
 import java.util.Iterator;
 
 public class GetReceipt {
-    private Date date;
-    private TaxComputation stateTax;
+    private BasicReceipt receipt;
 
-    public GetReceipt(Date date, TaxComputation tax){
-        this.date = date;
-        stateTax = tax;
+    public GetReceipt(){
+        receipt = new BasicReceipt();
     }
     // todo 1.	Sets the current date of the BasicReceipt.
     public Date getDate(){
