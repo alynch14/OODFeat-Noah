@@ -6,6 +6,9 @@ public class Main {
         PurchasedItems purchasedItems = new PurchasedItems();
         ReceiptFactory factory = new ReceiptFactory();
         // todo 3.	Prompts user for items to purchase, storing each in PurchasedItems.
+        while (input!="Done"){
+            System.out.println("Enter an item for purchase");
+        }
         // todo 4.	Calls the getReceipt method of the factory to obtain constructed receipt.
         // todo 5.	Prints receipt by method call to constructed receipt.
 
@@ -16,7 +19,6 @@ public class Main {
         // todo get all user selections(to be implemented)
 
 //        while(input!=null){add items to the reciept }
-
         Receipt receipt = factory.getReceipt(items, date);
         receipt.prtReceipt();
 
