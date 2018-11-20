@@ -4,17 +4,18 @@ public class MDTaxComputation extends TaxComputation {
 
     public double computeTax(PurchasedItems items, ReceiptDate date) {
         // todo calls private method taxHoliday as part of this computation
-        return 0;
+        if(taxHoliday(date)==true){
+            return 0;
+        }
+        else{
+            double tax = 0.06 * items.getTotalCost();
+            return tax;
+        }
     }
-
-//    @Override
-//    protected boolean taxHoliday() {
-//        return false;
-//    }
 
     protected boolean taxHoliday(ReceiptDate date) {
         // todo returns true if date of receipt within the state’s tax free holiday,
-        if (date.equals(true)){ //todo change placeholder with actual dates
+        if (date.equals("09/16")){ //todo change placeholder with actual dates
             return true;
         }
         else {

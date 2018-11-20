@@ -3,13 +3,15 @@ import java.util.Iterator;
 
 public class GetReceipt {
     private BasicReceipt receipt;
+    private Date date;
 
     public GetReceipt(){
         receipt = new BasicReceipt();
+        date = ReceiptDate.getDate();
     }
     // todo 1.	Sets the current date of the BasicReceipt.
     public Date getDate(){
-
+    // todo 2.	Attaches the StateComputation object to the BasicReceipt (by call to the setComputation method of BasicReceipt).
     }
     // todo 2.	Attaches the StateComputation object to the BasicReceipt (by call to the setComputation
     // method of BasicReceipt).

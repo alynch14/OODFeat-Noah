@@ -2,10 +2,11 @@ public class Main {
 
     public static void main(String[] args) {
         Object items = null;
-        String date = null;
+        String date = ReceiptDate.getDate().toString();
         PurchasedItems purchasedItems = new PurchasedItems();
         ReceiptFactory factory = new ReceiptFactory();
         // todo 3.	Prompts user for items to purchase, storing each in PurchasedItems.
+
         while (input!="Done"){
             System.out.println("Enter an item for purchase");
         }

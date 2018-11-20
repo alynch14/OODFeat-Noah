@@ -1,4 +1,5 @@
 public class ReceiptFactory {
+    private static final String StateCode = null;
     String header;  // contains line with “Best Buy”, store_num, street_addr, phone
     String state_code;
 
@@ -7,10 +8,24 @@ public class ReceiptFactory {
 
     public ReceiptFactory() {  // constructor
         //todo 1. Populates array of StateComputation objects and array of AddOn objects (as if downloaded from the BestBuy web site).
-
         // todo 2. Reads config file to assign store_num, street_addr, etc.
         // todo 3.	Based on the state code (e.g., “MD”, from the config file) stores appropriate StateComputation object to be used on all receipts.
+        Object tax;
+        if (StateCode=="MD"){
+                tax=MDTaxComputation(items, date);
+            }
+            else if(StateCode=="DE"){
+                tax=MassTaxComputation(items, date);
+            }
+            else if(StateCode=="CA"){
+                tax=CATaxComputation(items, date);
+            }
+            else if(StateCode=="MA"){
+                tax=MassTaxComputation(items, date);
+            }
+            else{
 
+            }
     }
 
     public Receipt getReceipt(Object items, String date) {
