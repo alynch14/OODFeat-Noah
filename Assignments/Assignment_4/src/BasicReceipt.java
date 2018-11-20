@@ -18,9 +18,12 @@ public class BasicReceipt implements Receipt {
 
     public void setTaxComputation(TaxComputation tc) { this.tc = tc; }
 
-    public void setDate(Date date) { this.date = date; }
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public void prtReceipt() {
-        // todo implement
+        System.out.println("Date: "+date);
+        System.out.println(items);
     }
 }
