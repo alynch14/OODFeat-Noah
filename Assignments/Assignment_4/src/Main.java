@@ -16,16 +16,15 @@ public class Main {
         Receipt receipt = (Receipt) factory.getReceipt(items, date);
         PurchasedItems purchasedItems = new PurchasedItems();
         displayOptions();
-        int choice = 1;
+        int choice=4;
         while (choice != 0) {
-            System.out.println("What would you like to do?\n------------------------");
-            displayOptions();
+            System.out.println("----------------------------------------\n" +"What would you like to do?\n----------------------------------------");
             choice = input.nextInt();
             switch (choice) {
                 case 1:
                     break;
                 case 2:
-                    enterItem(purchasedItems);
+                    enterItem(input, purchasedItems);
                     break;
                 case 3:
                     receipt.prtReceipt();
@@ -33,31 +32,30 @@ public class Main {
                 default:
                     break;
             }
+            displayOptions();
         }
     }
 
-    private static void enterItem(PurchasedItems purchasedItems) {
-            System.out.println("Enter an item? Y/N");
+    private static void enterItem(Scanner input, PurchasedItems purchasedItems) {
             input = new Scanner(System.in);
-            while (!input.equals("N")) {
-                System.out.println("Enter an item code for purchase. Enter None to quit");
-                Scanner inputCode = new Scanner(System.in);
-                String code = inputCode.toString();
-                System.out.println("Enter an item for purchase. Enter None to quit");
-                Scanner inputItem = new Scanner(System.in);
-                String item = inputCode.toString();
+                System.out.println("Enter an item code for purchase.");
+//                Scanner inputCode = new Scanner(System.in);
+//                String code = inputCode.toString();
+                String code=input.nextLine();
+                System.out.println("Enter an item for purchase.");
+//                String inputItem = input.nextLine();
+                String item = input.nextLine();//inputCode.toString();
                 System.out.println("Enter a price for purchase. Enter None to quit");
                 Scanner inputPrice = new Scanner(System.in);
-                String price = inputCode.toString();
+                String price = input.nextLine();//inputCode.toString();
                 StoreItem itemBought = new StoreItem(code, item, price);
                 purchasedItems.addItem(itemBought);
                 System.out.println("Enter another item? Y/N");
                 input = new Scanner(System.in);
-            }
         }
 
     private static void displayOptions() {
-        System.out.println("Your options for matrix operations are:\n" +
+        System.out.println("----------------------------------------\n" +"Your options for matrix operations are:\n" +
 
                 "----------------------------------------\n" +
 
