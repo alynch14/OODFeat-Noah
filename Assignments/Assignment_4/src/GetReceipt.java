@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class GetReceipt {
     private Date date;
     private TaxComputation stateTax;
@@ -16,7 +18,9 @@ public class GetReceipt {
 //    If of type SecondaryHeader, then creates a PreDecorator for othe AddOn. If of type Rebate or
 //    Coupon, then creates a PostDecorator.
     // todo 4.	Links in the decorator object based on the Decorator design pattern.
+
     // todo 5.	Adds current date to
+
     // todo 6.	Returns decorated BasicReceipt object as type Receipt.
 
 }
