@@ -1,3 +1,5 @@
+package Assignments.Assignment_4.src.ReceiptClasses;
+
 public class ReceiptFactory {
     private static final String StateCode = null;
     String header;  // contains line with “Best Buy”, store_num, street_addr, phone
@@ -28,7 +30,11 @@ public class ReceiptFactory {
             }
     }
 
-    public Receipt getReceipt(Object items, String date) {
+    public Receipt getReceipt(PurchasedItems items) {
+        BasicReceipt receipt = new BasicReceipt();
+        receipt.setDate(ReceptDate.getDate());
+        receipt.setComputation(tax);
+        
         return null;
     }
 }
