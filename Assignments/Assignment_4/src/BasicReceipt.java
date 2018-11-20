@@ -1,5 +1,3 @@
-package ReceiptClasses;
-
 import java.util.Date;
 
 public class BasicReceipt implements Receipt {
