@@ -2,7 +2,7 @@ import java.util.Date;
 
 public class ReceiptFactory {
     private static final String StateCode = null;
-    private static final ReceiptDate date = ReceiptDate.getDate();
+    private static final ReceiptDate date = (ReceiptDate) ReceiptDate.getDate();
     String header;  // contains line with “Best Buy”, store_num, street_addr, phone
     String state_code;
 

@@ -11,7 +11,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         PurchasedItems items = null;
-        ReceiptDate date = ReceiptDate.getDate();
+        System.out.println("Please enter the date of transaction MM/DD/YYYY: ");
+        String dateString = input.nextLine();
+        ReceiptDate dateObj= (ReceiptDate) dateString;
+        ReceiptDate dateInitialize = new ReceiptDate((ReceiptDate) dateObj);
+        ReceiptDate date = (ReceiptDate) dateInitialize.getDate();
         ReceiptFactory factory = new ReceiptFactory();
         Receipt receipt = (Receipt) factory.getReceipt(items, date);
         PurchasedItems purchasedItems = new PurchasedItems();

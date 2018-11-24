@@ -5,7 +5,7 @@ public class BasicReceipt implements Receipt {
     private String stateCode;  	// MD, DE, CA or MA
 
     private PurchasedItems items;
-    private ReceiptDate date=ReceiptDate.getDate();
+    private ReceiptDate date= (ReceiptDate) ReceiptDate.getDate();
     private TaxComputation tc;
 
     public BasicReceipt(){
@@ -23,6 +23,11 @@ public class BasicReceipt implements Receipt {
     }
 
     public void prtReceipt() {
+        //todo store header
+        System.out.println("Date obj: "+date);
         System.out.println("Date: "+ date.toString());
         System.out.println(items);    }
+        //todo itemized sales
+        //todo Total Sale (without sales tax)
+        //todo	Amount Due (with added sales tax)
 }

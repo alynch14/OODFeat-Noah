@@ -12,6 +12,6 @@ public class MDTaxComputation extends TaxComputation {
     }
 
     protected boolean taxHoliday(ReceiptDate date) {
-        return date.equals("08/12") || date.equals("08/13") || date.equals("08/14") || date.equals("08/15") || date.equals("08/16") || date.equals("08/17") || date.equals("08/18")
+        return date.equals("08/12") || date.equals("08/13") || date.equals("08/14") || date.equals("08/15") || date.equals("08/16") || date.equals("08/17") || date.equals("08/18");
     }
 }

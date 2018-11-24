@@ -2,7 +2,7 @@ import java.util.Date;
 
 public class ReceiptDate {
     private static Object date;
-    public ReceiptDate(Date dateObject) {
+    public ReceiptDate(ReceiptDate dateObject) {
         date = dateObject;
     }
 
@@ -11,6 +11,7 @@ public class ReceiptDate {
     }
 
     public static Object getDate() {
+        System.out.println("ReceiptDate: "+date);
         return date;
     }
 
@@ -22,6 +23,7 @@ public class ReceiptDate {
         else if(obj.getClass().equals(Date.class)){
             myDate = ((Date) obj).toString();
         }
+        System.out.println("MyDate: "+myDate);
         return myDate.equals(date);
     }
 }
