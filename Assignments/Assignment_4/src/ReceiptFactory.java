@@ -48,7 +48,7 @@ public class ReceiptFactory {
     }
 
     public Receipt getReceipt(PurchasedItems items, ReceiptDate date) {
-        BasicReceipt receipt = new BasicReceipt();
+        BasicReceipt receipt = new BasicReceipt(items);
         receipt.setDate(date);
 //        receipt.computation(tax);
 

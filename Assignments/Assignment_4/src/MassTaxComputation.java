@@ -1,6 +1,5 @@
 public class MassTaxComputation  extends TaxComputation {
     @Override
-
     public double computeTax(PurchasedItems items, ReceiptDate date) {
         if((Boolean) taxHoliday(date)){
             return 0;
@@ -12,11 +11,6 @@ public class MassTaxComputation  extends TaxComputation {
     }
 
     protected boolean taxHoliday(ReceiptDate date) {
-        if (date.equals("08/13") || date.equals("08/14")){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return date.equals("08/13") || date.equals("08/14");
     }
 }
