@@ -1,13 +1,13 @@
 import java.util.Date;
 
 public class ReceiptDate {
-    private static Object date;
+    private static ReceiptDate date;
     public ReceiptDate(ReceiptDate dateObject) {
         date = dateObject;
     }
 
     public ReceiptDate(String dateString){
-        date = dateString;
+        date = ReceiptDate dateString.;
     }
 
     public static ReceiptDate getDate() {

@@ -32,4 +32,9 @@ public class PurchasedItems  {
         }
         return false;
     }
+
+    public int size() {
+        int size=items.size();
+        return size;
+    }
 }
