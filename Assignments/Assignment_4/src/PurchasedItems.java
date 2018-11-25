@@ -19,6 +19,10 @@ public class PurchasedItems  {
         return total;
     }
 
+    public ArrayList<StoreItem> getItems() {
+        return items;
+    }
+
     public boolean containsItem(String itemCode) {
         for(StoreItem item : items){
             if(item.getItemCode().equals(itemCode)){

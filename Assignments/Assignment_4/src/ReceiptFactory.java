@@ -18,21 +18,7 @@ public class ReceiptFactory {
         Double tax;
         PurchasedItems items=null;
 //        ReceiptDate date=ReceiptDate.getDate();
-        if (StateCode=="MD"){
-                tax= new MDTaxComputation().computeTax(items, date);
-            }
-            else if(StateCode=="DE"){
-                tax= new MassTaxComputation().computeTax(items, date);
-            }
-            else if(StateCode=="CA"){
-                tax= new CATaxComputation().computeTax(items, date);
-            }
-            else if(StateCode=="MA"){
-                tax= new MassTaxComputation().computeTax(items, date);
-            }
-            else{
 
-            }
     }
 
     private void readConfigFile() {

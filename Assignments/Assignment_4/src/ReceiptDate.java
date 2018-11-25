@@ -10,9 +10,9 @@ public class ReceiptDate {
         date = dateString;
     }
 
-    public static Object getDate() {
-        System.out.println("ReceiptDate: "+date);
-        return date;
+    public static ReceiptDate getDate() {
+        System.out.println("ReceiptDate: "+date.toString());
+        return (ReceiptDate) date;
     }
 
     public boolean equals(Object obj){

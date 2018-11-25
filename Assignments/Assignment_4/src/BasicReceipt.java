@@ -1,13 +1,13 @@
 import java.util.Date;
 
 public class BasicReceipt implements Receipt {
-    private String storeInfo;  	// store number, store address, phone number
+    private String storeInfo="Best Buy Towson (Store #149)\n" +"1717 York Rd, Timonium, MD 21093\n" +"Phone: (410) 561-2260";  	// store number, store address, phone number
     private String stateCode;  	// MD, DE, CA or MA
-
+    private String lineDecoration="________________________________________";
     private PurchasedItems items;
     private ReceiptDate date= (ReceiptDate) ReceiptDate.getDate();
     private TaxComputation tc;
-
+    private StateComputation sc= new StateComputation();
     public BasicReceipt(){
         items = new PurchasedItems();
     }
@@ -23,11 +23,15 @@ public class BasicReceipt implements Receipt {
     }
 
     public void prtReceipt() {
-        //todo store header
-        System.out.println("Date obj: "+date);
-        System.out.println("Date: "+ date.toString());
-        System.out.println(items);    }
-        //todo itemized sales
-        //todo Total Sale (without sales tax)
-        //todo	Amount Due (with added sales tax)
+        System.out.println(lineDecoration);
+        System.out.println(storeInfo);
+        System.out.println(lineDecoration);
+        System.out.println("Date: "+ date);
+        System.out.println(items);
+        System.out.println("Total (Before Tax): "+items.getTotalCost());
+//        System.out.println("Tax: "+tc.computeTax(items, date));
+        System.out.println("Tax: "+ sc.StateComputation(items,date,stateCode));
+        System.out.println("Total: "+2);
+    }
+
 }
