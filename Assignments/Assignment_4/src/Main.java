@@ -10,10 +10,11 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        PurchasedItems items = null;
+        PurchasedItems items = new PurchasedItems();
         System.out.println("Please enter the date of transaction MM/DD/YYYY: ");
         String dateString = input.nextLine();
         ReceiptDate dateObj= new ReceiptDate(dateString);
+        System.out.println();
         ReceiptDate dateInitialize = new ReceiptDate((ReceiptDate) dateObj);
         ReceiptDate date = (ReceiptDate) dateInitialize.getDate();
         ReceiptFactory factory = new ReceiptFactory();
@@ -22,11 +23,14 @@ public class Main {
         displayOptions();
         int choice=4;
         while (choice != 0) {
-            System.out.println("----------------------------------------\n" +"What would you like to do?\n----------------------------------------");
+            System.out.println("----------------------------------------\n"
+                    +"What would you like to do?\n"+
+                    "----------------------------------------");
             choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    //todo start new receipt;
+                    items = new PurchasedItems();
+                    receipt= (Receipt) factory.getReceipt(items, date);
                     break;
                 case 2:
                     enterItem(input, purchasedItems);

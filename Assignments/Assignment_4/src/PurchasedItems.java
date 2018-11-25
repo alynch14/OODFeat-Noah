@@ -14,7 +14,8 @@ public class PurchasedItems  {
     public double getTotalCost() {
         double total = 0;
         for(StoreItem item : items){
-            total +=  (double) Integer.parseInt(item.getItemPrice());
+            System.out.println("Items (PI): "+item.getItemPrice());
+            total +=  Double.valueOf(item.getItemPrice());//(double) Integer.parseInt(item.getItemPrice());
         }
         return total;
     }

@@ -1,10 +1,9 @@
 import java.util.Date;
 
 public class ReceiptFactory {
-    private static final String StateCode = null;
+    private static final String StateCode = "MD";
     private static final ReceiptDate date = (ReceiptDate) ReceiptDate.getDate();
-    String header;  // contains line with “Best Buy”, store_num, street_addr, phone
-    String state_code;
+    String header ="Best Buy Towson (Store #149)\n" +"1717 York Rd, Timonium, MD 21093\n" +"Phone: (410) 561-2260";  // contains line with “Best Buy”, store_num, street_addr, phone
 
     private TaxComputation[] taxComputationsObjs;    // tax computation objects (for each state)
     private AddOn[] addOns;   // secondary header, rebate and coupon add-ons
