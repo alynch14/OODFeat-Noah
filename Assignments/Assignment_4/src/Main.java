@@ -16,7 +16,7 @@ public class Main {
         ReceiptDate date= new ReceiptDate(dateString);
 //        System.out.println();
         ReceiptFactory factory = new ReceiptFactory();
-        Receipt receipt = factory.getReceipt(items, date);
+        Receipt receipt = factory.getReceipt(date);
         PurchasedItems purchasedItems = new PurchasedItems();
         displayOptions();
         int choice=4;
@@ -28,10 +28,10 @@ public class Main {
             switch (choice) {
                 case 1:
                     items = new PurchasedItems();
-                    receipt= factory.getReceipt(items, date);
+                    receipt= factory.getReceipt(date);
                     break;
                 case 2:
-                    enterItem(input, purchasedItems);
+                    enterItem(input, factory, date);
                     break;
                 case 3:
                     receipt.prtReceipt();
@@ -43,7 +43,7 @@ public class Main {
         }
     }
 
-    private static void enterItem(Scanner input, PurchasedItems purchasedItems) {
+    private static void enterItem(Scanner input, ReceiptFactory factory, ReceiptDate date) {
             input = new Scanner(System.in);
             String choice = "Y";
             while(choice.equals("Y") || choice.equals("y")){
@@ -54,7 +54,7 @@ public class Main {
                 System.out.println("Enter a price for purchase.");
                 String price = input.nextLine();
                 StoreItem itemBought = new StoreItem(code, item, price);
-                purchasedItems.addItem(itemBought);
+                factory.getReceipt(date).addItem(itemBought);
                 System.out.println("Enter another item? Y/N");
                 choice=input.nextLine();
             }

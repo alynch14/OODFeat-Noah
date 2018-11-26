@@ -40,12 +40,12 @@ public class ReceiptFactory {
         receipt = new BasicReceipt();
         storeItems = new ArrayList<>();
 
-        for(int i = 0; i < 10 ; i++){
-            storeItems.add(new StoreItem("00"+i, "placeholder", "10.53"));
-            receipt.addItem(storeItems.get(i));
-        }
+//        for(int i = 0; i < 10 ; i++){
+//            storeItems.add(new StoreItem("00"+i, "placeholder", "10.53"));
+//            receipt.addItem(storeItems.get(i));
+//        }
         storeItems.add(new StoreItem("1406", "Rebate Item", "99.98"));
-        receipt.addItem(storeItems.get(10));
+        receipt.addItem(storeItems.get(0));
         receipt.setTaxComputation(new StateComputation("MD"));
     }
 
@@ -61,7 +61,7 @@ public class ReceiptFactory {
         }
     }
 
-    public Receipt getReceipt(PurchasedItems items, ReceiptDate date) {
+    public BasicReceipt getReceipt(ReceiptDate date) {
         receipt.setDate(date);
 //        receipt.computation(tax);
 
