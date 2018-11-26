@@ -16,7 +16,7 @@ public class Main {
         ReceiptDate date= new ReceiptDate(dateString);
         System.out.println();
         ReceiptFactory factory = new ReceiptFactory();
-        Receipt receipt = (Receipt) factory.getReceipt(items, date);
+        Receipt receipt = factory.getReceipt(items, date);
         PurchasedItems purchasedItems = new PurchasedItems();
         displayOptions();
         int choice=4;

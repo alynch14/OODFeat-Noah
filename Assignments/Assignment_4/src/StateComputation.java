@@ -1,7 +1,12 @@
 public class StateComputation extends TaxComputation{
     double tax=0;
+    private String stateCode;
 
-    public Double StateComputation(PurchasedItems items, ReceiptDate date, String stateCode) {
+    public StateComputation(String code){
+        stateCode = code;
+    }
+
+    public Double StateComputation(PurchasedItems items, ReceiptDate date) {
         if (stateCode.equals("MD")) {
             return tax = new MDTaxComputation().computeTax(items, date);
         } else if (stateCode.equals("DE")) {
