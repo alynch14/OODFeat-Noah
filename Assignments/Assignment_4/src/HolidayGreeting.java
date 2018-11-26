@@ -3,6 +3,9 @@ public class HolidayGreeting implements AddOn, SecondaryHeading {
         return true;   // SecondaryHeading decorators always applied
     }
     public String getLines() {
-        return "* Happy Holidays from Best Buy *";
+        return "******************************************************* \n"
+                +"*            Happy Holidays from Best Buy             * \n"
+                +"******************************************************* \n";
+
     }
 }

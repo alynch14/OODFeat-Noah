@@ -8,7 +8,7 @@ public class ReceiptDate {
     }
 
     public static String getDate() {
-        System.out.println("ReceiptDate: "+date.toString());
+//        System.out.println("ReceiptDate: "+date.toString());
         return date;
     }
 
@@ -20,7 +20,7 @@ public class ReceiptDate {
         else if(obj.getClass().equals(Date.class)){
             myDate = ((Date) obj).toString();
         }
-        System.out.println("MyDate: "+myDate);
+//        System.out.println("MyDate: "+myDate);
         return myDate.equals(date);
     }
 

@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Please enter the date of transaction MM/DD/YYYY: ");
         String dateString = input.nextLine();
         ReceiptDate date= new ReceiptDate(dateString);
-        System.out.println();
+//        System.out.println();
         ReceiptFactory factory = new ReceiptFactory();
         Receipt receipt = factory.getReceipt(items, date);
         PurchasedItems purchasedItems = new PurchasedItems();
