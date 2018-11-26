@@ -7,7 +7,8 @@ public class PreDecorator extends Decorator {
     }
 
     public void prtReceipt() {
-        System.out.println(a.getLines());
+        PurchasedItems items= new PurchasedItems();
+        System.out.println(a.applies(items));
         callTrailer();
     }
 }
