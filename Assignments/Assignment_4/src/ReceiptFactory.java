@@ -44,8 +44,8 @@ public class ReceiptFactory {
 //            storeItems.add(new StoreItem("00"+i, "placeholder", "10.53"));
 //            receipt.addItem(storeItems.get(i));
 //        }
-        storeItems.add(new StoreItem("1406", "Rebate Item", "99.98"));
-        receipt.addItem(storeItems.get(0));
+//        storeItems.add(new StoreItem("1406", "Rebate Item", "99.98"));
+//        receipt.addItem(storeItems.get(0));
         receipt.setTaxComputation(new StateComputation("MD"));
     }
 
