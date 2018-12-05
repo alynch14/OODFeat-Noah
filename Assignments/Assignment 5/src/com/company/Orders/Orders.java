@@ -16,7 +16,7 @@ public class Orders {
         items.add(new OrderItem(item.getItemNumber()));
     }
 
-    public List<OrderItem> getOrders(){
-        return items;
+    public void submitOrder(){
+
     }
 }

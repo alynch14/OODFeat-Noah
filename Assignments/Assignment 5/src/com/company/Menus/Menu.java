@@ -14,7 +14,9 @@ public class Menu {
         itemList.add(new MenuItem(number, description, price));
     }
 
-    public List<MenuItem> getMenu(){
-        return itemList;
+    public void displayMenu(){
+        for(MenuItem item : itemList){
+            System.out.println(item);
+        }
     }
 }

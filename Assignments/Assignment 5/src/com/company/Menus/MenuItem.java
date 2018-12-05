@@ -28,4 +28,9 @@ public class MenuItem {
     public double getCost() {
         return cost;
     }
+
+    @Override
+    public String toString(){
+        return String.format("%d\n%s\n$%.2f", itemNumber, description, cost);
+    }
 }

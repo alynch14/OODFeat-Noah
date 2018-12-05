@@ -7,5 +7,8 @@ public class Tab {
     private Orders orders;
     private Menu menu;
 
+    public void displayTab(){
+
+    }
 
 }

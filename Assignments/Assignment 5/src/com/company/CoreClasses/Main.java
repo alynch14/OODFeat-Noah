@@ -1,31 +1,46 @@
 package com.company.CoreClasses;
 
+import com.company.CommandPattern.Aggregator;
+import com.company.CommandPattern.DisplayMenuCommand;
+import com.company.CommandPattern.Invoker;
+import com.company.CommandPattern.SubmitOrderCommand;
+
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner (System.in);
-        int choice = 0;
+        Scanner input = new Scanner(System.in);
+        int choice = -1;
+        Aggregator aggregate = new Aggregator();
+        Invoker invoke = new Invoker();
+        DisplayMenuCommand showMenu = new DisplayMenuCommand(aggregate.getMyMenu());
+        SubmitOrderCommand submitOrder = new SubmitOrderCommand(aggregate.getMyOrders());
 
-        printOptionsMenu();
-        choice = getInt(input);
+        while (choice != 0) {
+            printOptionsMenu();
+            choice = getInt(input);
 
-        switch(choice) {
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            default:
+            switch (choice) {
+                case 1:
+                    invoke.setCommand(showMenu);
+                    invoke.invokeCommand();
+                    break;
+                case 2:
+                    invoke.setCommand(submitOrder);
+                    invoke.invokeCommand();
+                    break;
+                case 3:
+                    break;
+                default:
+            }
         }
     }
 
     public static void printOptionsMenu(){
         System.out.println("Please enter which command you would like to execute: ");
         System.out.println("-----------------------------------------------------");
-        System.out.print("1) Display Menu\n2) Submit Order\n3) Display Tab\n");
+        System.out.print("1) Display Menu\n2) Submit Order\n3) Display Tab\n0) Exit Program\n");
         System.out.println("Please enter your choice: ");
     }
 
