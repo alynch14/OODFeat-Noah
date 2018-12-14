@@ -4,6 +4,7 @@ import com.company.CommandPattern.Aggregator;
 import com.company.CommandPattern.DisplayMenuCommand;
 import com.company.CommandPattern.Invoker;
 import com.company.CommandPattern.SubmitOrderCommand;
+import com.company.Reports.Reports;
 
 import java.util.Scanner;
 
@@ -12,6 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int choice = -1;
+        Tab tab= new Tab();
         Aggregator aggregate = new Aggregator();
         Invoker invoke = new Invoker();
         DisplayMenuCommand showMenu = new DisplayMenuCommand(aggregate.getMyMenu());
@@ -31,8 +33,12 @@ public class Main {
                     invoke.invokeCommand();
                     break;
                 case 3:
+                    tab.displayTab();
                     break;
-                default:
+                case 4:
+                    new Reports();
+                    break;
+                    default:
             }
         }
     }
@@ -40,7 +46,7 @@ public class Main {
     public static void printOptionsMenu(){
         System.out.println("Please enter which command you would like to execute: ");
         System.out.println("-----------------------------------------------------");
-        System.out.print("1) Display Menu\n2) Submit Order\n3) Display Tab\n0) Exit Program\n");
+        System.out.print("1) Display Menu\n2) Submit Order\n3) Display Tab\n4) Display Reports\n0) Exit Program\n");
         System.out.println("Please enter your choice: ");
     }
 

@@ -12,7 +12,7 @@ public class Reports {
     Menu myMenu;
     Orders orders;
     Scanner input = new Scanner(System.in);
-    Reports() {
+    public Reports() {
         generateReportsMenu();
 
         int choice = getInt(input);
