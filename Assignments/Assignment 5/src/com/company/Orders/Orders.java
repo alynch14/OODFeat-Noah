@@ -16,7 +16,11 @@ public class Orders {
         items.add(new OrderItem(item.getItemNumber()));
     }
 
-    public void submitOrder(){
+    public void removeOrderItem(MenuItem item){
+        items.remove(item.getItemNumber());
+    }
 
+    public void submitOrder(){
+        new Orders();
     }
 }
