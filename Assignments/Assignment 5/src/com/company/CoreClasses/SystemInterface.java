@@ -14,12 +14,14 @@ public class SystemInterface {
     }
 
     public static void displayMenu(){
+        myMenu.displayMenu();
     }
 
     public static void submitOrder(){
+        myOrder.submitOrder();
     }
 
     public static void displayTab(){
-
+        myTab.displayTab();
     }
 }

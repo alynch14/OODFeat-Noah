@@ -10,6 +10,10 @@ public class Menu {
         itemList = new ArrayList<>();
     }
 
+    public List<MenuItem> getItemList() {
+        return itemList;
+    }
+
     public void addMenuItem(int number, String description, double price){
         itemList.add(new MenuItem(number, description, price));
     }
