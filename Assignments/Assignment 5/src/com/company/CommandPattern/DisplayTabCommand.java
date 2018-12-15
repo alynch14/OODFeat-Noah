@@ -1,6 +1,6 @@
 package com.company.CommandPattern;
 
-import com.company.CoreClasses.Tab;
+import com.company.CompositeTabPattern.Tab;
 
 public class DisplayTabCommand implements Command {
     private Tab tab;

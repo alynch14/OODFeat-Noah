@@ -4,6 +4,7 @@ import com.company.CommandPattern.Aggregator;
 import com.company.CommandPattern.DisplayMenuCommand;
 import com.company.CommandPattern.Invoker;
 import com.company.CommandPattern.SubmitOrderCommand;
+import com.company.CompositeTabPattern.Tab;
 import com.company.Reports.Reports;
 
 import java.util.Scanner;

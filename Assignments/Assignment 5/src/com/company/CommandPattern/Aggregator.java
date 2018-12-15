@@ -1,6 +1,6 @@
 package com.company.CommandPattern;
 
-import com.company.CoreClasses.Tab;
+import com.company.CompositeTabPattern.Tab;
 import com.company.Menus.Menu;
 import com.company.Orders.Orders;
 

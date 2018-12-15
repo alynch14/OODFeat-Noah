@@ -1,8 +1,9 @@
 package com.company.Orders;
 
+import com.company.CompositeTabPattern.AllTabsAndOrders;
 import com.company.Menus.MenuItem;
 
-public class OrderItem {
+public class OrderItem extends AllTabsAndOrders {
     private int itemNumber;
 
     public OrderItem() {

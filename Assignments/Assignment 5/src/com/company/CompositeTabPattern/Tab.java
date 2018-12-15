@@ -1,4 +1,4 @@
-package com.company.CoreClasses;
+package com.company.CompositeTabPattern;
 
 import com.company.Menus.Menu;
 import com.company.Orders.Orders;
@@ -6,7 +6,7 @@ import com.company.Orders.Orders;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Tab {
+public class Tab  extends AllTabsAndOrders {
     private Orders orders;
     private Menu menu;
     Iterable<? extends Orders> orderList;
