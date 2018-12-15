@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Menu {
     private List<MenuItem> itemList;
-
     public Menu() {
         itemList = new ArrayList<>();
     }

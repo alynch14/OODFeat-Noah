@@ -11,6 +11,7 @@ public class Aggregator {
 
     public Aggregator(){
         myMenu = new Menu();
+        myMenu.addMenuItem(1, "Taco", 5);
         myOrders = new Orders();
         myTab = new Tab();
     }

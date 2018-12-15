@@ -13,6 +13,14 @@ public class AllTabsAndOrders {
         orders = new HashMap<>();
     }
 
+    public HashMap<Integer, OrderItem> getOrders() {
+        return orders;
+    }
+
+    public HashMap<Integer, Tab> getTabs() {
+        return tabs;
+    }
+
     public void addOrderItem(OrderItem item, int table) {
         orders.put(table, item);
     }

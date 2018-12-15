@@ -25,4 +25,9 @@ public class Tab  extends AllTabsAndOrders {
         }
         return stringTab;
     }
+
+    @Override
+    public void addTabItem(int table, Tab tab) {
+        super.addTabItem(table, tab);
+    }
 }
