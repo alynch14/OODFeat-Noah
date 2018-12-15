@@ -10,7 +10,6 @@ import static jdk.javadoc.internal.tool.Main.main;
 
 public class Reports {
     Menu myMenu;
-    Orders orders;
     Scanner input = new Scanner(System.in);
     public Reports() {
         generateReportsMenu();

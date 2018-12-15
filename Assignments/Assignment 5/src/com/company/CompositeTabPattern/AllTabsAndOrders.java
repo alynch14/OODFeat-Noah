@@ -15,6 +15,9 @@ public class AllTabsAndOrders {
 
     public void addOrderItem(OrderItem item, int table) {
         orders.put(table, item);
-//        tabs.put(table, )
+    }
+
+    public void addTabItem(int table, Tab tab) {
+        tabs.put(table, tab);
     }
 }
